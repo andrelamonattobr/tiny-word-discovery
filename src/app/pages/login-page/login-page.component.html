@@ -1,1 +1,19 @@
-<p>login-page works!</p>
+<div class="auth-container">
+  <div class="auth-left-panel wood-frame">
+    <div class="app-name wood-frame-tiny">PATO PALAVRA</div>
+    <div class="app-symbol">
+     <img src="pato-palavra.png" class="app-symbol-img">
+    </div>
+  </div>
+  <div class="auth-right-panel wood-frame">
+    <div class="form-toggle">
+      <button [class.active]="showLogin">Login</button>
+    </div>
+    <div class="login-form">
+      <h2 class="wood-frame">Login</h2>
+      <input #usernameLogin type="email" placeholder="Email" />
+      <input #passwordLogin type="password" placeholder="Password" />
+      <button (click)="login(usernameLogin.value, passwordLogin.value)">Login</button>
+    </div>
+  </div>
+</div>
